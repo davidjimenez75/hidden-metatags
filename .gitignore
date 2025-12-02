@@ -1,0 +1,32 @@
+# DokuWiki Plugin Development
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# IDE files
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Temporary files
+/tmp/
+*.tmp
+*.bak
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Desktop.ini
+
+# Build artifacts
+node_modules/
+vendor/
+composer.lock
+package-lock.json
