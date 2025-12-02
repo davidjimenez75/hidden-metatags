@@ -20,7 +20,7 @@ class syntax_plugin_metatags extends DokuWiki_Syntax_Plugin
      */
     public function getType()
     {
-        return 'substition';
+        return 'substitution';
     }
 
     /**
