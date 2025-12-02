@@ -1,0 +1,7 @@
+base   metatags
+author David Jimenez
+email  david@example.com
+date   2025-12-02
+name   Metatags Plugin
+desc   Support for Obsidian-style tags (#tag) in DokuWiki with Markdowku compatibility
+url    https://github.com/davidjimenez75/dokuwiki-metatags
