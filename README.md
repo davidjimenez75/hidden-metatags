@@ -1,6 +1,30 @@
-This is a experimental fork of "Hidden" (a Dokuwiki Plugin) to try to made Obsidian tags 100% "compatibles" with Dokuwiki + Markdowku (Markdown on Dokuwiki pages)
+This is an experimental fork of "Hidden" (a DokuWiki Plugin) to make Obsidian
+FrontMatter 100% compatible with DokuWiki + Markdowku (Markdown on DokuWiki pages).
 
-Example of metatags to add to a Dokuwiki page.
+## Obsidian FrontMatter (native `---` delimiters)
+
+The plugin now supports the **native Obsidian FrontMatter format** using `---`
+as the delimiter. The block must start on the **very first line** of the page and
+the closing `---` must appear **within the first 100 lines**.
+
+```
+---
+title: My Page
+tags:
+  - dokuwiki
+  - obsidian
+  - metatags
+category: notes
+status: wip
+updated: 2025-12-02
+---
+# TITLE OF THE DOKUWIKI PAGE
+```
+
+The FrontMatter block is rendered as a collapsible hidden section in DokuWiki,
+exactly the same as the legacy syntax below.
+
+## Legacy syntax (still supported)
 
 ```
 <--->
@@ -20,8 +44,16 @@ updated: 2025-12-02
 </code>
 </--->
 # TITLE OF THE DOKUWIKI PAGE
-
 ```
+
+## How it works
+
+The `PARSER_WIKITEXT_PREPROCESS` event is used to detect the Obsidian `---`
+delimiters **before** the DokuWiki lexer runs. If the document starts with `---`
+and a matching closing `---` is found within the first 100 lines, both
+delimiters are transparently converted to `<--->` / `</-->` so that the
+hidden plugin can collapse the block as usual. The raw wiki source is never
+modified — the conversion happens only during rendering.
 
 ![Screenshot.jpg](https://raw.githubusercontent.com/davidjimenez75/hidden-metatags/main/screenshot.jpg)
 
