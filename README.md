@@ -16,7 +16,7 @@ tags:
   - metatags
 category: notes
 status: wip
-updated: 2025-12-02
+updated: 2026-03-06
 ---
 # TITLE OF THE DOKUWIKI PAGE
 ```
@@ -24,25 +24,25 @@ updated: 2025-12-02
 The FrontMatter block is rendered as a collapsible hidden section in DokuWiki,
 exactly the same as the legacy syntax below.
 
-## Legacy syntax (still supported)
+## The #metatag are also supported by Obsidian (and easy to search on Dokuwiki)
+
+Can be search on Dokuwiki with: `"#tag"`
 
 ```
-<--->
-<code>
+---
 title: hidden - obsidian compatible tag testing
 tags:
-  - dokuwiki
-  - extensions
-  - extensiones
-  - metatags
-  - php
-  - wiki
-  - 2025-12
+  - #dokuwiki
+  - #extensions
+  - #extensiones
+  - #metatags
+  - #php
+  - #wiki
+  - #2026-03
 category: metatags
 status: wip
-updated: 2025-12-02
-</code>
-</--->
+updated: 2026-03-06
+--
 # TITLE OF THE DOKUWIKI PAGE
 ```
 
